@@ -15,13 +15,39 @@ Else
 6.	Return 0
  
 Program:
-
-//type your code here
-
+```
+Developed By : THARUN SRIDHAR
+Register No : 212223230230
+```
+```
+#include<stdio.h>
+struct person{
+    int x;
+    char y[20];
+};
+int main()
+{
+   struct person p;
+   printf("Enter age: ");
+   scanf("%d",&p.x);
+   printf("Enter Name: ");
+   scanf("%s",p.y);
+   printf("Age:%d\n",p.x);
+   printf("Name:%s\n",p.y);
+   
+   if(p.x>6)
+   {
+       printf("eligibility:yes");
+   }
+   else
+   {
+       printf("eligibility:no");
+   }
+}
+```
 
 Output:
-
-//paste your output here
+<img width="407" height="230" alt="image" src="https://github.com/user-attachments/assets/3401fa5d-aa51-47af-b28e-784d0675a6a0" />
 
 
 Result:
@@ -43,18 +69,42 @@ Algorithm:
 7.	Return 0
  
 Program:
+```
+Developed By : THARUN SRIDHAR
+Register No : 212223230230
+```
+```
+#include <stdio.h>
 
-//type your code here
+struct Result {
+    int sum;
+};
 
 
+struct Result calculate(int a, int b) {
+    struct Result res;
+    res.sum = a + b;
+    return res;
+}
 
+int main() {
+    int num1, num2;
+    struct Result result;
+    scanf("%d %d", &num1, &num2);
+
+    
+    result = calculate(num1, num2);
+
+    
+    printf("%d\n", result.sum);
+
+    return 0;
+}
+```
 
 Output:
 
-
-//paste your output here
-
-
+<img width="407" height="308" alt="image" src="https://github.com/user-attachments/assets/66fcb0bf-6bb1-4d3e-a0b5-15e13db63972" />
 
 
 Result:
@@ -85,24 +135,28 @@ Use scanf to input the file name into the name array.
 5.	Return 0 to indicate successful program execution.
  
 Program:
-
-//type your code here
-
-
+```
+Developed By : THARUN SRIDHAR
+Register No : 212223230230
+```
+```
+#include <stdio.h>
+int main()
+{
+    char fn[100];
+    scanf("%s",fn);
+    FILE *file=fopen(fn,"w");
+    printf("%s File Created Successfully\n",fn);
+    printf("%s File Opened\n",fn);
+    fclose(file);
+    printf("%s File Closed\n",fn);
+}
+```
 
 
 Output:
 
-
-//paste your output here
-
-
-
-
-
-
-
-
+<img width="991" height="388" alt="image" src="https://github.com/user-attachments/assets/ced1fb3b-b268-44fa-b226-2447f5c4b863" />
 
 
 
@@ -132,19 +186,37 @@ Use scanf to input the file name into the name array and the number of strings i
 5.	Return 0 to indicate successful program execution.
  
 Program:
-
-//type your code here
-
+```
+Developed By : THARUN SRIDHAR
+Register No : 212223230230
+```
+```
+#include <stdio.h>
+int main()
+{
+    char fn[100];
+    scanf("%s",fn);
+    
+    FILE *file=fopen(fn,"w");
+    printf("%s Opened\n",fn);
+    
+    int n;
+    char wd[100];
+    scanf("%d",&n);
+    for(int i=0;i<n;i++)
+    {
+        scanf("%s",wd);
+        fputs(wd,file);
+    }
+    printf("Data added Successfully");
+}
+```
 
 
 
 Output:
 
-
-//paste your output here
-
-
-
+<img width="777" height="363" alt="image" src="https://github.com/user-attachments/assets/16ad8b83-beb2-4c11-8c72-16f26eced734" />
 
 
 
@@ -186,8 +258,42 @@ Algorithm:
 13.End the program by returning 0.
 
 Program:
-
-//type your code here
+```
+Developed By : THARUN SRIDHAR
+Register No : 212223230230
+```
+```
+#include <stdio.h>
+#include <stdlib.h>
+struct Subject
+{
+    char name[20];
+    int marks;
+};
+int main()
+{
+    int i,n;
+    scanf("%d",&n);
+    struct Subject *s = (struct Subject *)malloc(n*sizeof(struct Subject));
+    if(s==NULL)
+    {
+        printf("Memory Alocation Failed\n");
+        return 1;
+    }
+    for(i=0;i<n;i++)
+    {
+        scanf("%s %d",s[i].name,&s[i].marks);
+    }
+    for(i=0;i<n;i++)
+    {
+        printf("%s  %d\n",s[i].name,s[i].marks);
+    }
+    
+    free (s);
+    
+    return 0;
+}
+```
 
 
 
@@ -195,10 +301,7 @@ Program:
 Output:
 
 
-//paste your output here
-
-
-
+<img width="359" height="271" alt="image" src="https://github.com/user-attachments/assets/955c700c-2fad-4838-87a0-5076142fbd7c" />
 
 
 
