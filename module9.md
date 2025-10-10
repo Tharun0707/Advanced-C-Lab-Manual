@@ -176,6 +176,7 @@ void enqueue(float data)
 **Output:**
 
 
+<img width="542" height="285" alt="image" src="https://github.com/user-attachments/assets/5d228f98-cd90-4ec0-8695-5347f63a324e" />
 
 
 
