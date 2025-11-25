@@ -95,6 +95,7 @@ int main() {
 
 Output: 
 
+
 <img width="426" height="108" alt="image" src="https://github.com/user-attachments/assets/6ad1f728-ffa4-4336-8cfb-8970494f5b0b" />
 
 
@@ -165,6 +166,8 @@ int main() {
 
 
 Output:
+
+
 <img width="219" height="298" alt="image" src="https://github.com/user-attachments/assets/152f24db-a0eb-4a96-a11d-d19f343ffaf6" />
 
 
@@ -212,6 +215,7 @@ int main() {
 
 
 Output:
+
 
 <img width="401" height="93" alt="image" src="https://github.com/user-attachments/assets/7f1ed52a-6179-4826-b477-535236e668f8" />
 
