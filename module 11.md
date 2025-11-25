@@ -93,7 +93,7 @@ int main() {
 }
 ```
 
-Output:
+Output: 
 
 <img width="426" height="108" alt="image" src="https://github.com/user-attachments/assets/6ad1f728-ffa4-4336-8cfb-8970494f5b0b" />
 
