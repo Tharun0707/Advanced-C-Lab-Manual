@@ -1,5 +1,4 @@
 
-
 EXP NO 26: C PROGRAM TO DISPLAY STACK ELEMENTS USING LINKED LIST.
 Aim:
 To write a C program to display stack elements using linked list.
@@ -14,12 +13,51 @@ Algorithm:
 7.	Move to the next node using the next pointer.
  
 Program:
+```
+#include <stdio.h>
+#include <stdlib.h>
 
-//type your code here
+struct Node {
+    int data;
+    struct Node* next;
+};
+
+struct Node* head = NULL;
+
+void push(int value) {
+    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+    newNode->data = value;
+    newNode->next = head;
+    head = newNode;
+}
+
+void display() {
+    struct Node* p = head; 
+    printf("Stack elements:\n");
+    while (p != NULL) {
+        printf("%d\n", p->data);  
+        p = p->next;            
+    }
+}
+
+int main() {
+    push(10);
+    push(20);
+    push(30);
+
+    display();
+
+    return 0;
+}
+
+
+```
 
 Output:
 
-//paste your output here
+
+<img width="922" height="404" alt="image" src="https://github.com/user-attachments/assets/06d2b2bb-0d7e-420d-9203-e6cd4551ee14" />
+
 
 
 Result:
@@ -40,11 +78,79 @@ Algorithm:
  
 Program:
 
-//type your code here
+```
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Node {
+    int data;
+    struct Node* next;
+};
+
+struct Node* head = NULL;
+
+void push(int value) {
+    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+    newNode->data = value;
+    newNode->next = head;
+    head = newNode;
+}
+
+void pop() {
+    if (head == NULL) {
+        printf("Stack is empty.\n");
+    } else {
+        struct Node* temp = head; 
+        printf("Popped element: %d\n", temp->data); 
+        head = head->next; 
+        free(temp); 
+    }
+}
+
+void display() {
+    if (head == NULL) {
+        printf("Stack is empty.\n");
+        return;
+    }
+    struct Node* p = head;
+    printf("Stack elements:\n");
+    while (p != NULL) {
+        printf("%d\n", p->data);
+        p = p->next;
+    }
+}
+
+int main() {
+    push(10);
+    push(20);
+    push(30);
+
+    printf("Stack before popping:\n");
+    display();
+
+    pop();
+
+    printf("Stack after popping:\n");
+    display();
+
+    pop();
+    pop();
+    pop();
+
+    return 0;
+}
+
+```
+
 
 Output:
 
-//paste your output here
+
+<img width="922" height="551" alt="image" src="https://github.com/user-attachments/assets/e2215026-1723-4f41-a077-b297d97cada8" />
+
 
 
 
@@ -63,12 +169,62 @@ Algorithm:
 5.	End the display function.
  
 Program:
+```
+#include <stdio.h>
+#include <stdlib.h>
 
-//type your code here
+struct Node {
+    int data;
+    struct Node* next;
+};
+
+struct Node* front = NULL;
+struct Node* rear = NULL;
+
+void enqueue(int value) {
+    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+    newNode->data = value;
+    newNode->next = NULL;
+    if (rear == NULL) {
+        front = rear = newNode; 
+    } else {
+        rear->next = newNode; 
+        rear = newNode;       
+    }
+}
+
+void display() {
+    if (front == NULL) {
+        printf("Queue is empty.\n");
+        return;
+    }
+
+    struct Node* temp = front; 
+    printf("Queue elements:\n");
+    while (temp != NULL) {
+        printf("%d\n", temp->data); 
+        temp = temp->next;          
+    }
+}
+
+int main() {
+    enqueue(10);
+    enqueue(20);
+    enqueue(30);
+
+    display();
+
+    return 0;
+}
+```
+
 
 Output:
 
-//paste your output here
+
+<img width="918" height="386" alt="image" src="https://github.com/user-attachments/assets/efbb4309-0486-433b-9b20-c3fca764308c" />
+
+
 
 Result:
 Thus, the program to display queue elements using linked list is verified successfully.
@@ -89,12 +245,67 @@ Algorithm:
 6.	End of Enqueue Operation
  
 Program:
+```
 
-//type your code here
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Node {
+    int data;
+    struct Node* next;
+};
+
+struct Node* front = NULL;
+struct Node* rear = NULL;
+
+void enqueue(int value) {
+    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+    
+    newNode->data = value;
+    newNode->next = NULL;
+    
+    if (rear == NULL) {
+        front = rear = newNode; 
+    } else {
+        rear->next = newNode;  
+        rear = newNode;       
+    }
+    printf("%d inserted into the queue.\n", value);
+}
+
+void display() {
+    if (front == NULL) {
+        printf("Queue is empty.\n");
+        return;
+    }
+
+    struct Node* temp = front; 
+    printf("Queue elements:\n");
+    while (temp != NULL) {
+        printf("%d\n", temp->data); 
+        temp = temp->next;         
+    }
+}
+
+int main() {
+    enqueue(10);
+    enqueue(20);
+    enqueue(30);
+
+    display();
+
+    return 0;
+}
+
+```
+
 
 Output:
 
-//paste your output here
+
+<img width="922" height="511" alt="image" src="https://github.com/user-attachments/assets/84584ce2-49d6-4fba-a16f-676c4ec05151" />
+
+
 
 Result:
 Thus, the program to insert elements in queue using linked list is verified successfully.
@@ -116,12 +327,61 @@ o	If the queue is empty (i.e., the front pointer is NULL), return an error or a 
 o	If the queue is not empty, return the data stored in the front node of the linked list (i.e., the element at the head of the queue).
 
 Program:
+```
+#include <stdio.h>
+#include <stdlib.h>
 
-//type your code here
+struct Node {
+    int data;
+    struct Node* next;
+};
+
+struct Node* front = NULL;
+struct Node* rear = NULL;
+
+void enqueue(int value) {
+    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+    newNode->data = value;
+    newNode->next = NULL;
+
+    if (rear == NULL) {
+        front = rear = newNode;
+    } else {
+        rear->next = newNode;
+        rear = newNode;
+    }
+}
+
+int peek() {
+    if (front == NULL) {
+        printf("Queue is empty.\n");
+        return -1;
+    }
+
+    return front->data;
+}
+
+int main() {
+    enqueue(10);
+    enqueue(20);
+    enqueue(30);
+
+    int frontElement = peek();
+    if (frontElement != -1) { 
+        printf("Front element of the queue is: %d\n", frontElement);
+    }
+
+    return 0;
+}
+
+
+```
 
 Output:
 
-//paste your output here
+
+
+<img width="921" height="325" alt="image" src="https://github.com/user-attachments/assets/71482e35-5900-4d53-9de1-454350ce1905" />
 
 
 
