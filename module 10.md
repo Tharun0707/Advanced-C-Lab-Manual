@@ -67,8 +67,8 @@ Thus, the program to search a given element in the given linked list is verified
 
 
  
-EXP NO:17  PROGRAM TO INSERT A NODE IN A LINKED LIST.
-Aim:
+## EXP NO:17  PROGRAM TO INSERT A NODE IN A LINKED LIST.
+### Aim:
 To write a C program to insert a node in a linked list.
 Algorithm:
 1.	Define the structure for a node in a linked list
@@ -76,7 +76,7 @@ Algorithm:
 3.	Initialize the head of the linked list as needed.
 4.	Call the insert function and perform other linked list operations as needed.
  
-Program:
+### Program:
 
 ```
 #include <stdio.h>
@@ -132,28 +132,28 @@ int main() {
 
 ```
 
-Output:
+### Output:
 
 <img width="921" height="292" alt="image" src="https://github.com/user-attachments/assets/a2ae1439-e55b-428d-8ebf-d90ed573a763" />
 
 
  
-Result:
+### Result:
 Thus, the program to insert a node in a linked list is verified successfully.
 
 
  
-EXP NO:18 C PROGRAM TO TRAVERSE A DOUBLY LINKED LIST
-Aim:
+## EXP NO:18 C PROGRAM TO TRAVERSE A DOUBLY LINKED LIST
+### Aim:
 To write a C program to traverse a doubly linked list.
 
-Algorithm:
+### Algorithm:
 1.	Initialize a temporary pointer (temp) to the head of the list.
 2.	Use a while loop to traverse the list until the end (temp == NULL) is reached.
 3.	Inside the loop, print the data of the current node.
 4.	Move to the next node by updating the temp pointer to point to the next node (temp = temp->next).
  
-Program:
+### Program:
 
 ```
 #include <stdio.h>
@@ -201,30 +201,30 @@ int main() {
 
 ```
 
-Output:
+### Output:
 
 
 <img width="921" height="333" alt="image" src="https://github.com/user-attachments/assets/a38655ec-53c7-4b59-b34a-5e77dfe58c94" />
 
 
 
-Result:
+### Result:
 Thus, the program to traverse a doubly linked list is verified successfully. 
 
 
 
-EXP NO:19 C PROGRAM TO INSERT AN ELEMENT IN DOUBLY LINKED LIST
-Aim:
+## EXP NO:19 C PROGRAM TO INSERT AN ELEMENT IN DOUBLY LINKED LIST
+### Aim:
 To write a C program to insert an element in doubly linked list
 
-Algorithm:
+### Algorithm:
 1.	Create a new node (newNode) and allocate memory for it.
 2.	Set the data of the new node to the provided value.
 3.	If the list is empty, set the new node as the head.
 4.	If the list is not empty, traverse the list to find the last node.
 5.	Set the new node's prev pointer to the last node and update the last node's next pointer to the new node.
  
-Program:
+### Program:
 ```
 #include <stdio.h>
 #include <stdlib.h>
@@ -282,13 +282,13 @@ int main() {
 
 ```
 
-Output:
+### Output:
 
 <img width="922" height="293" alt="image" src="https://github.com/user-attachments/assets/a0d73557-2a3e-45bb-b106-d3c74da1429f" />
 
 
 
-Result:
+### Result:
 Thus, the program to insert an element in doubly linked list is verified successfully.
 
 
@@ -299,10 +299,10 @@ EXP NO:20 C FUNCTION TO DELETE A GIVEN ELEMENT IN THE GIVEN LINKED LIST
 
 
 
-Aim:
+### Aim:
 To write a C function that deletes a given element from a linked list.
 
-Algorithm:
+### Algorithm:
 1.	Check if the Linked List is Empty:
 o	If the head of the linked list is NULL, print a message indicating the list is empty and exit the function.
 2.	Traverse the Linked List:
@@ -321,7 +321,7 @@ o	If the element is not found in any node, print a message indicating the elemen
 6.	End the Function.
 
 
-Program:
+### Program:
 ```
 #include <stdio.h>
 #include <stdlib.h>
@@ -394,7 +394,7 @@ int main() {
 
 ```
 
-Output:
+### Output:
 
 
 
@@ -404,7 +404,7 @@ Output:
 
 
 
-Result:
+### Result:
 Thus, the function that deletes a given element from a linked list is verified successfully.
 
 
